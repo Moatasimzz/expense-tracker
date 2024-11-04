@@ -2,131 +2,110 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #FAF4F2;
-    color: #3D3D3D;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    min-height: 100vh;
+    background-color: #FFF8F0;
+    color: #333;
 }
 
-.tracker-container {
+header {
+    background-color: #BF765F;
     width: 100%;
-    max-width: 500px;
-    padding: 1em;
-}
-
-.main-heading {
+    padding: 1rem;
     text-align: center;
-    color: #BF765F;
-    margin-bottom: 1em;
+    color: #fff;
 }
 
-
-.transaction-section {
-    background-color: #FFF;
-    border-radius: 10px;
-    padding: 1.5em;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1.5em;
+h1 {
+    font-size: 2rem;
 }
 
-.transaction-form label {
-    display: block;
-    margin-top: 1em;
-    color: #3D3D3D;
+main {
+    width: 90%;
+    max-width: 800px;
+    margin: 1rem auto;
 }
 
-.input-field, .select-field, .submit-btn {
-    width: 100%;
-    padding: 0.8em;
-    margin-top: 0.5em;
-    border: 1px solid #ddd;
+.transaction-form,
+.filter-section {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.transaction-form input,
+.transaction-form select,
+.filter-section input,
+.filter-section select {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #BF765F;
     border-radius: 5px;
-    font-size: 1em;
 }
 
 .submit-btn {
+    padding: 0.5rem 1rem;
     background-color: #BF765F;
     color: #fff;
-    font-weight: bold;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 .submit-btn:hover {
-    background-color: #a55d51;
+    background-color: #A15449;
 }
 
-
-.budget-summary {
-    text-align: center;
-    background-color: #FFEDE6;
-    border-radius: 10px;
-    padding: 1em;
-    margin-bottom: 1em;
-}
-
-.budget-heading {
-    font-size: 1.5em;
-    color: #BF765F;
-}
-
-
-.transaction-list {
-    background-color: #FFF;
-    border-radius: 10px;
-    padding: 1em;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.section-heading {
-    color: #BF765F;
-    margin-bottom: 1em;
-}
-
-.transactions {
-    list-style: none;
-    padding: 0;
+.transactions-container {
+    list-style-type: none;
+    padding: 1rem;
+    background: #F9F1EB;
+    border: 1px solid #BF765F;
+    border-radius: 5px;
+    max-height: 300px;
+    overflow-y: auto;
 }
 
 .transaction-item {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1em;
-    padding-bottom: 0.5em;
-    border-bottom: 1px solid #ddd;
+    padding: 0.5rem;
+    border-bottom: 1px solid #BF765F;
 }
 
-.transaction-item p {
-    margin: 0;
+.transaction-item:last-child {
+    border-bottom: none;
 }
 
+.edit-btn,
 .delete-btn {
     background: none;
     border: none;
     cursor: pointer;
+    font-size: 1rem;
     color: #BF765F;
-    font-size: 1.2em;
+    margin-left: 0.5rem;
 }
 
-.delete-btn:hover {
-    color: #a55d51;
-}
-
-
-.footer {
+.total-balance {
+    font-weight: bold;
     text-align: center;
-    padding: 1em;
+    margin-top: 1rem;
+}
+
+footer {
     background-color: #BF765F;
-    color: #FFF;
-    border-top: 1px solid #ddd;
     width: 100%;
-    position: fixed;
-    bottom: 0;
+    text-align: center;
+    padding: 1rem;
+    color: #FFF;
+    margin-top: 1rem;
+    font-size: 0.9rem;
 }

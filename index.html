@@ -7,40 +7,43 @@
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-    <main class="tracker-container">
-        <h1 class="main-heading">Expense & Income Tracker</h1>
-        <section class="transaction-section">
-            <form class="transaction-form">
-                <label for="description">Description</label>
-                <input type="text" class="input-field description" placeholder="E.g., Rent payment" required>
-                
-                <label for="amount">Amount</label>
-                <input type="number" class="input-field amount" placeholder="E.g., 100" required>
-                
-                <label for="category">Type</label>
-                <select class="select-field category">
-                    <option value="income">Income</option>
-                    <option value="expense">Expense</option>
-                </select>
-                
-                <label for="date">Date</label>
-                <input type="date" class="input-field date" required>
-                
-                <button type="submit" class="submit-btn">Add Entry</button>
-            </form>
-        </section>
-     <section class="budget-summary">
-            <h2 class="budget-heading">Total Balance: <span class="total-balance">$0.00</span></h2>
-        </section>
-        <section class="transaction-list">
+    <header>
+        <h1>Expense Tracker</h1>
+    </header>
 
-          <h2 class="section-heading">Recent Transactions</h2>
+    <main>
+        <form class="transaction-form">
+            <input type="text" class="input-description" placeholder="Description" required>
+            <input type="number" class="input-amount" placeholder="Amount" required>
+            <select class="select-category">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+            <input type="date" class="input-date" required>
+            <button type="submit" class="submit-btn">Add Transaction</button>
+        </form>
 
-            <ul class="transactions"></ul>
-       </section>
+        <div class="filter-section">
+            <input type="number" class="filter-min-price" placeholder="Min Amount">
+            <input type="number" class="filter-max-price" placeholder="Max Amount">
+            <select class="filter-type">
+                <option value="">All</option>
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+            <input type="date" class="filter-date">
+            <input type="text" class="filter-notes" placeholder="Search Description">
+            <button id="apply-filters-btn" class="submit-btn">Apply Filters</button> 
+        </div>
+
+        
+        <section class="transactions-container"></section>
+
+        <section class="total-balance">Total Balance: $0.00</section>
     </main>
-   <footer class="footer">
-        <p>&copy; 2024 Expense Tracker </p>
+
+    <footer>
+        <p>&copy; 2024 Expense Tracker App</p>
     </footer>
 
     <script src="./script/script.js"></script>
