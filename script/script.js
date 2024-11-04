@@ -13,3 +13,6 @@ const updateTotalBalance = () => {
     }, 0);
     totalBalanceDisplay.textContent = `$${totalBalance.toFixed(2)}`;
 };
+const saveTransactions = () => {
+    localStorage.setItem('transactions', JSON.stringify(transactions));
+};
