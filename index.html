@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker !!</title>
+</head>
+<body>
+    <main class="tracker-container">
+        <h1 class="main-heading">Expense & Income Tracker</h1>
+        <section class="transaction-section">
+            <form class="transaction-form">
+                <label for="description">Description</label>
+                <input type="text" class="input-field description" placeholder="E.g., Rent payment" required>
+                
+                <label for="amount">Amount</label>
+                <input type="number" class="input-field amount" placeholder="E.g., 100" required>
+                
+                <label for="category">Type</label>
+                <select class="select-field category">
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                
+                <label for="date">Date</label>
+                <input type="date" class="input-field date" required>
+                
+                <button type="submit" class="submit-btn">Add Entry</button>
+            </form>
+        </section>
+    </main> 
+</body>
+</html>
