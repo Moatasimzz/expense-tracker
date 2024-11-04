@@ -16,3 +16,17 @@ const updateTotalBalance = () => {
 const saveTransactions = () => {
     localStorage.setItem('transactions', JSON.stringify(transactions));
 };
+
+const renderTransactions = () => {
+    transactionsContainer.innerHTML = '';
+    transactions.forEach((transaction, index) => {
+        const transactionItem = document.createElement('li');
+        transactionItem.classList.add('transaction-item');
+        transactionItem.innerHTML = `
+            <p>${transaction.description} - ${transaction.date}</p>
+            <p>${transaction.category === 'income' ? '+' : '-'}$${transaction.amount.toFixed(2)}</p>
+            <button class="delete-btn" onclick="deleteTransaction(${index})">&#10060;</button>
+        `;
+        transactionsContainer.appendChild(transactionItem);
+    });
+};
