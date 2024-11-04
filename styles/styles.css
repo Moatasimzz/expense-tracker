@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FAF4F2;
+    color: #3D3D3D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.tracker-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 1em;
+}
+
+.main-heading {
+    text-align: center;
+    color: #BF765F;
+    margin-bottom: 1em;
+}
+
+
+.transaction-section {
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 1.5em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5em;
+}
+
+.transaction-form label {
+    display: block;
+    margin-top: 1em;
+    color: #3D3D3D;
+}
+
+.input-field, .select-field, .submit-btn {
+    width: 100%;
+    padding: 0.8em;
+    margin-top: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.submit-btn {
+    background-color: #BF765F;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #a55d51;
+}
+
+
+.budget-summary {
+    text-align: center;
+    background-color: #FFEDE6;
+    border-radius: 10px;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+.budget-heading {
+    font-size: 1.5em;
+    color: #BF765F;
+}
+
+
+.transaction-list {
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-heading {
+    color: #BF765F;
+    margin-bottom: 1em;
+}
+
+.transactions {
+    list-style: none;
+    padding: 0;
+}
+
+.transaction-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #ddd;
+}
+
+.transaction-item p {
+    margin: 0;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #BF765F;
+    font-size: 1.2em;
+}
+
+.delete-btn:hover {
+    color: #a55d51;
+}
+
+
+.footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #BF765F;
+    color: #FFF;
+    border-top: 1px solid #ddd;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
