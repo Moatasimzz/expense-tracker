@@ -52,3 +52,7 @@ const deleteTransaction = (index) => {
     renderTransactions();
     updateTotalBalance();
 };
+
+transactionForm.addEventListener('submit', addTransaction);
+renderTransactions();
+updateTotalBalance();
