@@ -30,3 +30,18 @@ const renderTransactions = () => {
         transactionsContainer.appendChild(transactionItem);
     });
 };
+
+const addTransaction = (e) => {
+    e.preventDefault();
+    const newTransaction = {
+        description: entryDescription.value,
+        amount: parseFloat(entryAmount.value),
+        category: entryCategory.value,
+        date: entryDate.value
+    };
+    transactions.push(newTransaction);
+    saveTransactions();
+    renderTransactions();
+    updateTotalBalance();
+    transactionForm.reset();
+};
