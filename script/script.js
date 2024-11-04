@@ -6,3 +6,10 @@ const entryDate = document.querySelector('.date');
 const transactionsContainer = document.querySelector('.transactions');
 const totalBalanceDisplay = document.querySelector('.total-balance');
 let transactions = JSON.parse(localStorage.getItem('transactions')) || [];
+
+const updateTotalBalance = () => {
+    const totalBalance = transactions.reduce((acc, transaction) => {
+        return transaction.category === 'income' ? acc + transaction.amount : acc - transaction.amount;
+    }, 0);
+    totalBalanceDisplay.textContent = `$${totalBalance.toFixed(2)}`;
+};
