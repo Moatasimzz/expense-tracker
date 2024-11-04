@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expense Tracker !!</title>
+    <title>Expense Tracker</title>
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
@@ -29,14 +29,20 @@
                 <button type="submit" class="submit-btn">Add Entry</button>
             </form>
         </section>
-        <section class="budget-summary">
+     <section class="budget-summary">
             <h2 class="budget-heading">Total Balance: <span class="total-balance">$0.00</span></h2>
         </section>
+        <section class="transaction-list">
+
+          <h2 class="section-heading">Recent Transactions</h2>
+
+            <ul class="transactions"></ul>
+       </section>
     </main>
-    <footer class="footer">
-        <p>&copy; 2024 Expense Tracker</p>
+   <footer class="footer">
+        <p>&copy; 2024 Expense Tracker </p>
     </footer>
 
-    <script src="./script/script.js"></script> 
+    <script src="./script/script.js"></script>
 </body>
 </html>
