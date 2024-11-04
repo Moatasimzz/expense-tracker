@@ -45,3 +45,10 @@ const addTransaction = (e) => {
     updateTotalBalance();
     transactionForm.reset();
 };
+
+const deleteTransaction = (index) => {
+    transactions.splice(index, 1);
+    saveTransactions();
+    renderTransactions();
+    updateTotalBalance();
+};
